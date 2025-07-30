@@ -84,13 +84,13 @@ const generateJSONConfig = (config: FileUploadConfig) => {
 
 const generateInstallationCode = () => {
   return `# Install Drag UI File Upload Components
-npm install @drag-ui/file-upload
+npm install @drag-ui/drag-ui
 
 # Or with yarn
-yarn add @drag-ui/file-upload
+yarn add @drag-ui/drag-ui
 
 # Or with pnpm
-pnpm add @drag-ui/file-upload
+pnpm add @drag-ui/drag-ui
 
 # Install peer dependencies if not already installed
 npm install react react-dom @radix-ui/react-label @radix-ui/react-progress`

@@ -17,8 +17,8 @@ export function DocsPage() {
     setTimeout(() => setCopiedCode(null), 2000)
   }
 
-  const installCode = "npm install @drag-ui/file-upload"
-  const basicUsageCode = `import { FileUpload } from '@drag-ui/file-upload'
+  const installCode = "npm install @drag-ui/drag-ui"
+  const basicUsageCode = `import { FileUpload } from '@drag-ui/drag-ui'
 
 function App() {
   return (
