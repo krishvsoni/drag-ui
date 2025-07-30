@@ -1,0 +1,214 @@
+{
+  "name": "Drag UI Configuration",
+  "version": "1.0.0",
+  "description": "LLM-friendly configuration for Drag UI file upload components",
+  "defaultVariant": "dropzone",
+  "defaultColorTheme": "emerald",
+  "presets": {
+    "minimal": {
+      "variant": "button",
+      "colorTheme": "slate",
+      "size": "sm",
+      "radius": "md",
+      "maxFileSize": 5242880,
+      "maxFiles": 1,
+      "acceptedFileTypes": ["image/*"],
+      "labels": {
+        "uploadText": "Upload"
+      },
+      "showProgress": false,
+      "showPreview": false,
+      "showColorPicker": false,
+      "disabled": false
+    },
+    "standard": {
+      "variant": "dropzone",
+      "colorTheme": "emerald",
+      "size": "md",
+      "radius": "lg",
+      "maxFileSize": 10485760,
+      "maxFiles": 5,
+      "acceptedFileTypes": ["image/*", ".pdf", ".doc", ".docx"],
+      "labels": {
+        "uploadText": "Upload your files",
+        "dragText": "Drag and drop files here, or click to browse",
+        "browseText": "Browse Files",
+        "errorText": "Upload failed",
+        "successText": "Upload successful"
+      },
+      "showProgress": true,
+      "showPreview": true,
+      "showColorPicker": true,
+      "disabled": false
+    },
+    "advanced": {
+      "variant": "preview",
+      "colorTheme": "blue",
+      "size": "lg",
+      "radius": "xl",
+      "maxFileSize": 52428800,
+      "maxFiles": 20,
+      "acceptedFileTypes": ["*"],
+      "labels": {
+        "uploadText": "Upload Any Files",
+        "dragText": "Drag and drop files here to upload",
+        "browseText": "Choose Files",
+        "errorText": "Upload failed - please try again",
+        "successText": "All files uploaded successfully"
+      },
+      "showProgress": true,
+      "showPreview": true,
+      "showColorPicker": true,
+      "disabled": false
+    },
+    "imageGallery": {
+      "variant": "image",
+      "colorTheme": "purple",
+      "size": "lg",
+      "radius": "lg",
+      "maxFileSize": 15728640,
+      "maxFiles": 10,
+      "acceptedFileTypes": ["image/jpeg", "image/png", "image/webp", "image/gif", "image/svg+xml"],
+      "labels": {
+        "uploadText": "Upload Images",
+        "dragText": "Drop your images here",
+        "browseText": "Select Images",
+        "errorText": "Image upload failed",
+        "successText": "Images uploaded successfully"
+      },
+      "showProgress": true,
+      "showPreview": true,
+      "showColorPicker": true,
+      "disabled": false
+    },
+    "documentUpload": {
+      "variant": "compact",
+      "colorTheme": "orange",
+      "size": "sm",
+      "radius": "sm",
+      "maxFileSize": 20971520,
+      "maxFiles": 5,
+      "acceptedFileTypes": [".pdf", ".doc", ".docx", ".txt", ".rtf", ".odt"],
+      "labels": {
+        "uploadText": "Upload Documents",
+        "dragText": "or drag documents here",
+        "browseText": "Select Documents",
+        "errorText": "Document upload failed",
+        "successText": "Documents uploaded successfully"
+      },
+      "showProgress": true,
+      "showPreview": true,
+      "showColorPicker": false,
+      "disabled": false
+    }
+  },
+  "colorThemes": {
+    "emerald": {
+      "name": "Emerald",
+      "primary": "#059669",
+      "secondary": "#ecfdf5",
+      "accent": "#d1fae5",
+      "description": "Fresh green theme with nature-inspired gradients"
+    },
+    "blue": {
+      "name": "Blue",
+      "primary": "#2563eb",
+      "secondary": "#eff6ff",
+      "accent": "#dbeafe",
+      "description": "Classic blue theme with professional appearance"
+    },
+    "purple": {
+      "name": "Purple",
+      "primary": "#9333ea",
+      "secondary": "#faf5ff",
+      "accent": "#e9d5ff",
+      "description": "Creative purple theme with modern gradients"
+    },
+    "orange": {
+      "name": "Orange",
+      "primary": "#ea580c",
+      "secondary": "#fff7ed",
+      "accent": "#fed7aa",
+      "description": "Energetic orange theme with warm tones"
+    },
+    "rose": {
+      "name": "Rose",
+      "primary": "#e11d48",
+      "secondary": "#fff1f2",
+      "accent": "#fecdd3",
+      "description": "Elegant rose theme with soft pink accents"
+    },
+    "slate": {
+      "name": "Slate",
+      "primary": "#475569",
+      "secondary": "#f8fafc",
+      "accent": "#e2e8f0",
+      "description": "Neutral slate theme for professional interfaces"
+    }
+  },
+  "fileSizeLimits": {
+    "small": 5242880,
+    "medium": 10485760,
+    "large": 20971520,
+    "xlarge": 52428800
+  },
+  "commonFileTypes": {
+    "images": ["image/*", "image/jpeg", "image/png", "image/webp", "image/gif"],
+    "documents": [".pdf", ".doc", ".docx", ".txt", ".rtf", ".odt"],
+    "media": ["video/*", "audio/*", "image/*"],
+    "archives": [".zip", ".rar", ".7z", ".tar", ".gz"],
+    "code": [".js", ".ts", ".jsx", ".tsx", ".html", ".css", ".json", ".xml"],
+    "all": ["*"]
+  },
+  "defaultLabels": {
+    "en": {
+      "uploadText": "Upload files",
+      "dragText": "Drag and drop files here, or click to browse",
+      "browseText": "Browse Files",
+      "errorText": "Upload failed",
+      "successText": "Upload successful",
+      "removeText": "Remove file",
+      "retryText": "Retry upload"
+    },
+    "es": {
+      "uploadText": "Subir archivos",
+      "dragText": "Arrastra y suelta archivos aquí, o haz clic para explorar",
+      "browseText": "Explorar Archivos",
+      "errorText": "Error en la subida",
+      "successText": "Subida exitosa",
+      "removeText": "Eliminar archivo",
+      "retryText": "Reintentar subida"
+    },
+    "fr": {
+      "uploadText": "Télécharger des fichiers",
+      "dragText": "Glissez et déposez des fichiers ici, ou cliquez pour parcourir",
+      "browseText": "Parcourir les Fichiers",
+      "errorText": "Échec du téléchargement",
+      "successText": "Téléchargement réussi",
+      "removeText": "Supprimer le fichier",
+      "retryText": "Réessayer le téléchargement"
+    }
+  },
+  "accessibility": {
+    "ariaLabels": {
+      "fileInput": "File upload input",
+      "dropzone": "File drop zone",
+      "removeFile": "Remove file",
+      "uploadProgress": "Upload progress"
+    },
+    "keyboardShortcuts": {
+      "openFileDialog": ["Enter", "Space"],
+      "removeFile": ["Delete", "Backspace"],
+      "focusNext": ["Tab"],
+      "focusPrevious": ["Shift+Tab"]
+    }
+  },
+  "validation": {
+    "rules": {
+      "maxFileSize": "File size must be less than {maxSize}MB",
+      "fileType": "File type not supported. Accepted types: {types}",
+      "maxFiles": "Maximum {maxFiles} files allowed",
+      "required": "Please select at least one file"
+    }
+  }
+}

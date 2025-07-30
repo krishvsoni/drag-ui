@@ -1,0 +1,105 @@
+{
+  "defaultVariant": "dropzone",
+  "presets": {
+    "minimal": {
+      "variant": "button",
+      "size": "sm",
+      "radius": "md",
+      "maxFileSize": 5242880,
+      "maxFiles": 1,
+      "acceptedFileTypes": ["image/*"],
+      "labels": {
+        "uploadText": "Upload"
+      },
+      "showProgress": false,
+      "showPreview": false
+    },
+    "standard": {
+      "variant": "dropzone",
+      "size": "md",
+      "radius": "lg",
+      "maxFileSize": 10485760,
+      "maxFiles": 5,
+      "acceptedFileTypes": ["image/*", ".pdf", ".doc", ".docx"],
+      "labels": {
+        "uploadText": "Upload files",
+        "dragText": "Drag and drop files here, or click to browse",
+        "browseText": "Browse Files"
+      },
+      "showProgress": true,
+      "showPreview": true
+    },
+    "advanced": {
+      "variant": "preview",
+      "size": "lg",
+      "radius": "xl",
+      "maxFileSize": 52428800,
+      "maxFiles": 20,
+      "acceptedFileTypes": ["*"],
+      "labels": {
+        "uploadText": "Upload Any Files",
+        "dragText": "Drag and drop files here to upload",
+        "browseText": "Choose Files",
+        "errorText": "Upload failed",
+        "successText": "Upload completed"
+      },
+      "showProgress": true,
+      "showPreview": true
+    },
+    "imageOnly": {
+      "variant": "image",
+      "size": "lg",
+      "radius": "lg",
+      "maxFileSize": 15728640,
+      "maxFiles": 10,
+      "acceptedFileTypes": ["image/jpeg", "image/png", "image/webp", "image/gif"],
+      "labels": {
+        "uploadText": "Upload Images",
+        "dragText": "Drop your images here",
+        "browseText": "Select Images"
+      },
+      "showProgress": true,
+      "showPreview": true
+    },
+    "documentOnly": {
+      "variant": "compact",
+      "size": "sm",
+      "radius": "sm",
+      "maxFileSize": 20971520,
+      "maxFiles": 5,
+      "acceptedFileTypes": [".pdf", ".doc", ".docx", ".txt", ".rtf"],
+      "labels": {
+        "browseText": "Select Documents",
+        "dragText": "or drag documents here"
+      },
+      "showProgress": true,
+      "showPreview": true
+    }
+  },
+  "themes": {
+    "default": {
+      "colors": {
+        "primary": "hsl(var(--primary))",
+        "secondary": "hsl(var(--secondary))",
+        "accent": "hsl(var(--accent))",
+        "muted": "hsl(var(--muted))"
+      }
+    },
+    "green": {
+      "colors": {
+        "primary": "hsl(142, 76%, 36%)",
+        "secondary": "hsl(142, 76%, 90%)",
+        "accent": "hsl(142, 76%, 95%)",
+        "muted": "hsl(142, 10%, 95%)"
+      }
+    },
+    "orange": {
+      "colors": {
+        "primary": "hsl(25, 95%, 53%)",
+        "secondary": "hsl(25, 95%, 90%)",
+        "accent": "hsl(25, 95%, 95%)",
+        "muted": "hsl(25, 10%, 95%)"
+      }
+    }
+  }
+}
