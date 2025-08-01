@@ -20,12 +20,27 @@ import { ArrowLeft, Eye, Code, Copy, Check, Settings, Play, Download, X } from "
 // Import the JSON configuration
 import dragUIConfig from "@/config/drag-ui-config.json"
 
-const defaultConfigs: Record<string, FileUploadConfig> = {
-  dropzone: dragUIConfig.presets.standard,
-  button: dragUIConfig.presets.minimal,
-  compact: dragUIConfig.presets.documentUpload,
-  preview: dragUIConfig.presets.advanced,
-  image: dragUIConfig.presets.imageGallery,
+const presetConfigs: Record<string, FileUploadConfig> = {
+  dropzone: {
+    ...dragUIConfig.presets.standard,
+    variant: "dropzone" as const
+  },
+  button: {
+    ...dragUIConfig.presets.minimal,
+    variant: "button" as const
+  },
+  compact: {
+    ...dragUIConfig.presets.documentUpload,
+    variant: "compact" as const
+  },
+  preview: {
+    ...dragUIConfig.presets.advanced,
+    variant: "preview" as const
+  },
+  image: {
+    ...dragUIConfig.presets.imageGallery,
+    variant: "image" as const
+  },
 }
 
 const generateComponentCode = (config: FileUploadConfig, componentName = "MyFileUpload") => {
@@ -99,8 +114,8 @@ npm install react react-dom @radix-ui/react-label @radix-ui/react-progress`
 export function FileUploadDemo() {
   const [selectedConfig, setSelectedConfig] = React.useState("dropzone")
   const [customConfig, setCustomConfig] = React.useState("")
-  const [liveConfig, setLiveConfig] = React.useState<FileUploadConfig>(defaultConfigs.dropzone)
-  const [customizationConfig, setCustomizationConfig] = React.useState<FileUploadConfig>(defaultConfigs.dropzone)
+  const [liveConfig, setLiveConfig] = React.useState<FileUploadConfig>(presetConfigs.dropzone)
+  const [customizationConfig, setCustomizationConfig] = React.useState<FileUploadConfig>(presetConfigs.dropzone)
   const [copiedCode, setCopiedCode] = React.useState<string | null>(null)
 
   const handleFilesChange = (files: File[]) => {
@@ -148,7 +163,7 @@ export function FileUploadDemo() {
       }
 
       const parsed = JSON.parse(customConfig)
-      setLiveConfig({ ...defaultConfigs.dropzone, ...parsed })
+      setLiveConfig({ ...presetConfigs.dropzone, ...parsed })
       toast({
         title: "Config Applied",
         description: "Custom configuration has been applied successfully",
@@ -163,7 +178,7 @@ export function FileUploadDemo() {
   }
 
   const resetConfig = () => {
-    setLiveConfig(defaultConfigs.dropzone)
+    setLiveConfig(presetConfigs.dropzone)
     setCustomConfig("")
     toast({
       title: "Config Reset",
@@ -376,7 +391,7 @@ export function FileUploadDemo() {
         {/* Component Variants Tab */}
         <TabsContent value="variants" className="space-y-6">
           <div className="grid gap-4 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {Object.entries(defaultConfigs).map(([key, config]) => (
+            {Object.entries(presetConfigs).map(([key, config]) => (
               <Card key={key} className="space-y-4 bg-gradient-to-br from-white to-gray-50 border-2">
                 <CardHeader className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-t-lg p-4 sm:p-6">
                   <CardTitle className="capitalize flex items-center gap-2 text-base sm:text-lg">

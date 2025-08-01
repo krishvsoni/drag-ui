@@ -114,12 +114,13 @@ export interface FileUploadConfig {
   showColorPicker?: boolean
 }
 
-export interface FileUploadProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof fileUploadVariants> {
-  config?: FileUploadConfig
-  onFilesChange?: (files: File[]) => void
+export interface FileUploadProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onError'>, VariantProps<typeof fileUploadVariants> {
+  config: FileUploadConfig
+  onFilesChange: (files: File[]) => void
   onError?: (error: string) => void
-  onColorChange?: (color: keyof typeof colorThemes) => void
+  onColorChange?: (theme: keyof typeof colorThemes) => void
   value?: File[]
+  className?: string
 }
 
 interface FileWithPreview extends File {
